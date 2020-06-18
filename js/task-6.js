@@ -1,8 +1,7 @@
 const inputRef = document.querySelector('#validation-input')
 
 inputRef.addEventListener('change', event => {
-	inputRef.setAttribute('data-length', event.target.value.length)
-	if (inputRef.getAttribute('data-length') == 6) {
+	if (Number(inputRef.getAttribute('data-length')) === event.target.value.length) {
 		inputRef.classList.remove('invalid')
 		inputRef.classList.add('valid');
 
